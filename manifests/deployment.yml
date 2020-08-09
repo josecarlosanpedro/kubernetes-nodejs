@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      name: josecarlosanpedrokubernetesnodejs
+      name: josecarlosanpedrokubernetesnodejs-pod
       app: josecarlosanpedrokubernetesnodejs
   template:
     metadata:
