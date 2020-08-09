@@ -1,7 +1,10 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: josecarlosanpedrokubernetesnodejs 
+  name: josecarlosanpedrokubernetesnodejs-deploy
+  labels:
+    name: josecarlosanpedrokubernetesnodejs-deploy
+    app: josecarlosanpedrokubernetesnodejs
 spec:
   replicas: 1
   selector:
@@ -10,8 +13,10 @@ spec:
       app: josecarlosanpedrokubernetesnodejs
   template:
     metadata:
+      name: josecarlosanpedrokubernetesnodejs-pod
       labels:
-        app: josecarlosanpedrokubernetesnodejs 
+        name: josecarlosanpedrokubernetesnodejs-pod
+        app: josecarlosanpedrokubernetesnodejs
     spec:
       containers:
         - name: josecarlosanpedrokubernetesnodejs 
